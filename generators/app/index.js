@@ -2,6 +2,9 @@
 var yeoman = require('yeoman-generator');
 var chalk = require('chalk');
 var yosay = require('yosay');
+var _s = require('underscore.string');
+var wiredep = require('wiredep');
+var mkdirp = require('mkdirp');
 
 module.exports = yeoman.generators.Base.extend({
   initializing: function () {
@@ -12,19 +15,24 @@ module.exports = yeoman.generators.Base.extend({
 
     // Have Yeoman greet the user.
     this.log(yosay(
-      'Welcome to the WeStud.io ' + chalk.red('generator-gulp-website') + ' generator! I include Gulp and Sass.'
+      'Welcome to the WeStud.io ' + chalk.red('generator-gulp-website') + '! I include Gulp and Sass.'
     ));
 
     var prompts = [{
       type: 'confirm',
-      name: 'someOption',
-      message: 'Would you like to enable this option?',
+      name: 'scaffold',
+      message: 'You are about to scaffold a boilerplate project to start a new website. Continue?',
       default: true
     }];
 
     this.prompt(prompts, function (props) {
       this.props = props;
       // To access props later use this.props.someOption;
+      
+      if (!this.props.scaffold)
+      {
+        process.exit(1);
+      }
 
       done();
     }.bind(this));

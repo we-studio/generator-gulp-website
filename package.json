@@ -29,7 +29,10 @@
     "gulp-mocha": "^2.0.0",
     "gulp-plumber": "^1.0.0",
     "gulp-nsp": "^2.1.0",
-    "gulp-coveralls": "^0.1.0"
+    "gulp-coveralls": "^0.1.0",
+    "mkdirp": "^0.5.1",
+    "underscore.string": "^3.1.1",
+    "wiredep": "^2.2.2"
   },
   "repository": "we-studio/generator-gulp-website",
   "scripts": {

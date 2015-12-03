@@ -25,7 +25,8 @@
     "gulp-useref": "^3.0.0",
     "jshint-stylish": "~1.0.0",
     "main-bower-files": "^2.5.0",
-    "wiredep": "^2.2.2"
+    "wiredep": "^2.2.2",
+    "wrench": "~1.5.8"
   },
   "eslintConfig": {
     "env": {
